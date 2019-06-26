@@ -1,0 +1,29 @@
+<!-- <h1 [class.gray]="h1Style">Have a question? We can help</h1>
+<h1 [ngClass]="{
+  'gray': h1Style,
+  'large': !h1Style
+}">Have a question? We can help</h1> -->
+<!-- <h1 [class.gray]="h1Style">Have a question? We can help</h1> -->
+<!-- <h1 [style.color]="h1Style ? 'gray': 'black'">Have a question? We can help</h1> -->
+<!-- <h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+}">Have a question? We can help</h1> -->
+
+<h1>Have a question? We can help</h1>
+
+<ul *ngIf="faqs" class="faq-container">
+  <li *ngFor="let faq of faqs" class="faq">
+    <div class="question_block" [ngClass]="{'active': faq.show}" (click)="toggleAnswer(faq)">
+      <div class="id">Q{{ faq.id }}</div>
+      <div class="faq_question">{{ faq.question }}</div>
+      <div class="faq_question_icon_block">
+        <img src="assets/plus-icon.png" class="faq_question_icon" [ngClass]="{'active': faq.show}" />
+      </div>
+
+    </div>
+    <div class="faq_answer" [ngClass]="{
+      'show ': faq.show
+    }">{{ faq.answer }}</div>
+  </li>
+</ul>

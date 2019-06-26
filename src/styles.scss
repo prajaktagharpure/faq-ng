@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Variables */
+$h1-color: #1b1d1b;
+
+@font-face {
+  font-family: 'Oswald regular';
+  src: url(assets/fonts/oswald-regular.ttf) format("opentype");
+}
+@font-face{
+  font-family: 'Oswald bold';
+  src: url(assets/fonts/oswald-bold.ttf) format("opentype");
+}
+@font-face{
+  font-family: 'Oswald light';
+  src: url(assets/fonts/oswald-light.ttf) format("opentype");
+}
+
+
+
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Oswald regular';
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1.0em 1.5em;
+    display: grid;
+    grid-template-columns: 30% auto;
+
+    a {
+        color: #000000;
+    }
+}
+
+section {
+    margin: 0 auto;
+    padding: 1.0em 1.5em;
+}
+
+h1{
+  font-size: 1.8em;
+  text-transform: uppercase;
+  padding: 0 0 1em;
+  border-bottom: 40px solid $h1-color;
+  color: $h1-color;
+  font-family: 'Oswald bold';
+}
