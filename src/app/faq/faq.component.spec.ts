@@ -19,20 +19,5 @@ describe('FaqComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 
-  describe('toggleAnswer function', () => {
-    it("should toggle faq.show value", () => {
-      let faq = {
-        show: true
-      };
-      let showValue = component.toggleAnswer(faq);
-      console.log(showValue);
-
-      expect(showValue).toBe(false)
-
-    })
-  })
 });

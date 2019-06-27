@@ -13,5 +13,4 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
-
 });
